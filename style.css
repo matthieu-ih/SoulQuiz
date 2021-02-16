@@ -81,8 +81,12 @@ h2 {
 
 }
 
+.landing-page-text {
+    font-size: 1.5em;
+}
+
 #explore-container{
-    margin: 50px;
+    margin: 30px;
 }
 
 #explore-box {
@@ -201,7 +205,7 @@ box-shadow:0px 3px 3px 2px rgb(170, 166, 166);
 /* page 3 */
 
 #quiz-window {
-    height: 400px;
+    height: 500px;
     width: 100%;
     border-radius: 10px;
     box-shadow:0px 3px 3px 2px rgb(170, 166, 166);
@@ -222,6 +226,16 @@ box-shadow:0px 3px 3px 2px rgb(170, 166, 166);
     padding: 1px 40px;
     
 }
+
+input {
+    height: 50px;
+    width: 300px;
+    margin: 0 0 50px;
+    font-size: 1.5em;
+    border-radius: 5px;
+    
+}
+
 
 #lets-go-box {
 
@@ -307,10 +321,10 @@ box-shadow:0px 3px 3px 2px rgb(170, 166, 166);
 }
 
 .pictures-frame {
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     background-color: red;
-    margin: 0 30px ;
+    margin: 0 15px ;
     border-radius: 10px;
 }
 

@@ -1,3 +1,4 @@
+
 let letsGoButton = document.querySelector("div #lets-go-box")
 
  let findQuizMateButton = document.querySelector("div #find-my-quiz-mates-box")
@@ -29,14 +30,29 @@ let evilQuestions9 = document.getElementById("evil-questions9")
 let evilQuestions10 = document.getElementById("evil-questions10")
 
 
+let inputName = document.querySelector("#nameInput");
+
+let user1 = {
+    username : "",
+    quizEvilResult : []
+}
+
 letsGoButton.addEventListener("click", function(){
-   if (evilQuestions.style.display === "none") {
-       
+   if (inputName.value === ""){
+       alert("Please enter your name");
+   } else
+   
+    if (evilQuestions.style.display === "none") {
        evilQuestions.style.display = "block";
        evilIntro.style.display = "none";
 
+       user1.username = inputName.value;
+
    }
+   
 })
+
+console.log(user1);
 
 
 // let pictureFrame = document.getElementsByClassName("pictures-frame");
@@ -82,6 +98,9 @@ eframe1a[0].addEventListener("click", function(){
        evilQuestions.style.display = "none";
        evilQuestions2.style.display = "block";   
    }
+
+    user1.quizEvilResult.push("a")
+
 });
 
 eframe1b[0].addEventListener("click", function(){
@@ -90,7 +109,10 @@ eframe1b[0].addEventListener("click", function(){
        evilQuestions2.style.display = "block";   
    }
    
+   user1.quizEvilResult.push("b")
+
    });
+
 
 //2
 
@@ -99,6 +121,9 @@ eframe2a[0].addEventListener("click", function(){
        evilQuestions2.style.display = "none";
        evilQuestions3.style.display = "block";   
    }
+
+   user1.quizEvilResult.push("a")
+
 });
 
 eframe2b[0].addEventListener("click", function(){
@@ -106,6 +131,8 @@ eframe2b[0].addEventListener("click", function(){
        evilQuestions2.style.display = "none";
        evilQuestions3.style.display = "block";   
    }
+
+   user1.quizEvilResult.push("b")
    
    });
 
@@ -116,6 +143,9 @@ eframe3a[0].addEventListener("click", function(){
        evilQuestions3.style.display = "none";
        evilQuestions4.style.display = "block";   
    }
+
+   user1.quizEvilResult.push("a")
+
 });
 
 eframe3b[0].addEventListener("click", function(){
@@ -124,6 +154,8 @@ eframe3b[0].addEventListener("click", function(){
        evilQuestions4.style.display = "block";   
    }
    
+   user1.quizEvilResult.push("b")
+
    });
 //4
 eframe4a[0].addEventListener("click", function(){
@@ -131,6 +163,9 @@ eframe4a[0].addEventListener("click", function(){
        evilQuestions4.style.display = "none";
        evilQuestions5.style.display = "block";   
    }
+
+   user1.quizEvilResult.push("a")
+
 });
 
 eframe4b[0].addEventListener("click", function(){
@@ -139,6 +174,8 @@ eframe4b[0].addEventListener("click", function(){
        evilQuestions5.style.display = "block";   
    }
    
+   user1.quizEvilResult.push("b")
+
    });
 
 //5
@@ -147,6 +184,9 @@ eframe5a[0].addEventListener("click", function(){
        evilQuestions5.style.display = "none";
        evilQuestions6.style.display = "block";   
    }
+
+   user1.quizEvilResult.push("a")
+
 });
 
 eframe5b[0].addEventListener("click", function(){
@@ -154,6 +194,8 @@ eframe5b[0].addEventListener("click", function(){
        evilQuestions5.style.display = "none";
        evilQuestions6.style.display = "block";   
    }
+
+   user1.quizEvilResult.push("b")
    
    });
 
@@ -163,6 +205,9 @@ eframe6a[0].addEventListener("click", function(){
        evilQuestions6.style.display = "none";
        evilQuestions7.style.display = "block";   
    }
+
+   user1.quizEvilResult.push("a")
+
 });
 
 eframe6b[0].addEventListener("click", function(){
@@ -171,6 +216,8 @@ eframe6b[0].addEventListener("click", function(){
        evilQuestions7.style.display = "block";   
    }
    
+   user1.quizEvilResult.push("b")
+
    });
 
 //7
@@ -179,6 +226,9 @@ eframe7a[0].addEventListener("click", function(){
        evilQuestions7.style.display = "none";
        evilQuestions8.style.display = "block";   
    }
+
+   user1.quizEvilResult.push("a")
+
 });
 
 eframe7b[0].addEventListener("click", function(){
@@ -187,6 +237,8 @@ eframe7b[0].addEventListener("click", function(){
        evilQuestions8.style.display = "block";   
    }
    
+   user1.quizEvilResult.push("b")
+
    });
 
 //8
@@ -196,6 +248,9 @@ eframe8a[0].addEventListener("click", function(){
        evilQuestions8.style.display = "none";
        evilQuestions9.style.display = "block";   
    }
+
+   user1.quizEvilResult.push("a")
+
 });
 
 eframe8b[0].addEventListener("click", function(){
@@ -203,6 +258,8 @@ eframe8b[0].addEventListener("click", function(){
        evilQuestions8.style.display = "none";
        evilQuestions9.style.display = "block";   
    }
+
+   user1.quizEvilResult.push("b")
    
    });
 //9
@@ -211,6 +268,9 @@ eframe9a[0].addEventListener("click", function(){
        evilQuestions9.style.display = "none";
        evilQuestions10.style.display = "block";   
    }
+
+   user1.quizEvilResult.push("a")
+
 });
 
 eframe9b[0].addEventListener("click", function(){
@@ -219,6 +279,8 @@ eframe9b[0].addEventListener("click", function(){
        evilQuestions10.style.display = "block";   
    }
    
+   user1.quizEvilResult.push("b")
+
    });
 
 //10
@@ -229,6 +291,9 @@ eframe10a[0].addEventListener("click", function(){
        evilOutro.style.display = "flex";
          
    }
+
+   user1.quizEvilResult.push("a")
+
 });
 
 eframe10b[0].addEventListener("click", function(){
@@ -237,5 +302,7 @@ eframe10b[0].addEventListener("click", function(){
        evilOutro.style.display = "flex";
          
    }
+
+   user1.quizEvilResult.push("b")
        
    });
