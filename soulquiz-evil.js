@@ -9,7 +9,7 @@ let evilIntro = document.getElementById("evil-intro")
 
 let evilOutro = document.getElementById("evil-outro")
 
-let evilQuestions = document.getElementById("evil-questions")
+let evilQuestions1 = document.getElementById("evil-questions1")
 
 let evilQuestions2 = document.getElementById("evil-questions2")
 
@@ -32,21 +32,35 @@ let evilQuestions10 = document.getElementById("evil-questions10")
 
 let inputName = document.querySelector("#nameInput");
 
-let user1 = {
-    username : "",
-    quizEvilResult : []
+// let user1 = {
+//     username : "",
+//     quizEvilResult : []
+// }
+
+// class user
+
+class User {
+    constructor(userName, quizName){
+        this.userName = userName;
+        this.quizName = quizName;
+        this.quizNameResult = [];
+    }
 }
+
+let user1 = "";
 
 letsGoButton.addEventListener("click", function(){
    if (inputName.value === ""){
        alert("Please enter your name");
    } else
    
-    if (evilQuestions.style.display === "none") {
-       evilQuestions.style.display = "block";
+    if (evilQuestions1.style.display === "none") {
+       evilQuestions1.style.display = "block";
        evilIntro.style.display = "none";
 
-       user1.username = inputName.value;
+        user1 = new User (inputName.value, 'EvilQuiz');
+        
+       console.log(inputName.value.replace(/ /g, ''));
 
    }
    
@@ -54,11 +68,6 @@ letsGoButton.addEventListener("click", function(){
 
 console.log(user1);
 
-
-// let pictureFrame = document.getElementsByClassName("pictures-frame");
-
-// let picFrame0 = pictureFrame[0];
-// let picFrame1 = pictureFrame[1];
 
 let eframe1a = document.getElementsByClassName("eframe1a")
 let eframe1b = document.getElementsByClassName("eframe1b")
@@ -94,22 +103,27 @@ let eframe10b = document.getElementsByClassName("eframe10b")
 //1
 
 eframe1a[0].addEventListener("click", function(){
-   if (evilQuestions.style.display === "block") {
-       evilQuestions.style.display = "none";
+   if (evilQuestions1.style.display === "block") {
+       evilQuestions1.style.display = "none";
        evilQuestions2.style.display = "block";   
    }
 
-    user1.quizEvilResult.push("a")
+    //user1.quizEvilResult.push("a")
+    user1.quizNameResult.push("a")
+    console.log(user1)
+   
 
 });
 
 eframe1b[0].addEventListener("click", function(){
-   if (evilQuestions.style.display === "block") {
-       evilQuestions.style.display = "none";
+   if (evilQuestions1.style.display === "block") {
+       evilQuestions1.style.display = "none";
        evilQuestions2.style.display = "block";   
    }
    
-   user1.quizEvilResult.push("b")
+   //user1.quizEvilResult.push("b")
+   user1.quizNameResult.push("b")
+   console.log(user1)
 
    });
 
@@ -122,7 +136,8 @@ eframe2a[0].addEventListener("click", function(){
        evilQuestions3.style.display = "block";   
    }
 
-   user1.quizEvilResult.push("a")
+    //user1.quizEvilResult.push("a")
+    user1.quizNameResult.push("a")
 
 });
 
@@ -132,8 +147,8 @@ eframe2b[0].addEventListener("click", function(){
        evilQuestions3.style.display = "block";   
    }
 
-   user1.quizEvilResult.push("b")
-   
+    //user1.quizEvilResult.push("b")
+    user1.quizNameResult.push("b")
    });
 
 //3
@@ -144,7 +159,8 @@ eframe3a[0].addEventListener("click", function(){
        evilQuestions4.style.display = "block";   
    }
 
-   user1.quizEvilResult.push("a")
+    //user1.quizEvilResult.push("a")
+    user1.quizNameResult.push("a")
 
 });
 
@@ -154,8 +170,8 @@ eframe3b[0].addEventListener("click", function(){
        evilQuestions4.style.display = "block";   
    }
    
-   user1.quizEvilResult.push("b")
-
+    //user1.quizEvilResult.push("b")
+    user1.quizNameResult.push("b")
    });
 //4
 eframe4a[0].addEventListener("click", function(){
@@ -164,7 +180,8 @@ eframe4a[0].addEventListener("click", function(){
        evilQuestions5.style.display = "block";   
    }
 
-   user1.quizEvilResult.push("a")
+    //user1.quizEvilResult.push("a")
+    user1.quizNameResult.push("a")
 
 });
 
@@ -174,8 +191,8 @@ eframe4b[0].addEventListener("click", function(){
        evilQuestions5.style.display = "block";   
    }
    
-   user1.quizEvilResult.push("b")
-
+    //user1.quizEvilResult.push("b")
+    user1.quizNameResult.push("b")
    });
 
 //5
@@ -185,7 +202,8 @@ eframe5a[0].addEventListener("click", function(){
        evilQuestions6.style.display = "block";   
    }
 
-   user1.quizEvilResult.push("a")
+    //user1.quizEvilResult.push("a")
+    user1.quizNameResult.push("a")
 
 });
 
@@ -195,8 +213,8 @@ eframe5b[0].addEventListener("click", function(){
        evilQuestions6.style.display = "block";   
    }
 
-   user1.quizEvilResult.push("b")
-   
+    //user1.quizEvilResult.push("b")
+    user1.quizNameResult.push("b")
    });
 
 //6
@@ -206,7 +224,8 @@ eframe6a[0].addEventListener("click", function(){
        evilQuestions7.style.display = "block";   
    }
 
-   user1.quizEvilResult.push("a")
+    //user1.quizEvilResult.push("a")
+    user1.quizNameResult.push("a")
 
 });
 
@@ -216,8 +235,8 @@ eframe6b[0].addEventListener("click", function(){
        evilQuestions7.style.display = "block";   
    }
    
-   user1.quizEvilResult.push("b")
-
+    //user1.quizEvilResult.push("b")
+    user1.quizNameResult.push("b")
    });
 
 //7
@@ -227,7 +246,8 @@ eframe7a[0].addEventListener("click", function(){
        evilQuestions8.style.display = "block";   
    }
 
-   user1.quizEvilResult.push("a")
+    //user1.quizEvilResult.push("a")
+    user1.quizNameResult.push("a")
 
 });
 
@@ -237,8 +257,8 @@ eframe7b[0].addEventListener("click", function(){
        evilQuestions8.style.display = "block";   
    }
    
-   user1.quizEvilResult.push("b")
-
+    //user1.quizEvilResult.push("b")
+    user1.quizNameResult.push("b")
    });
 
 //8
@@ -249,7 +269,8 @@ eframe8a[0].addEventListener("click", function(){
        evilQuestions9.style.display = "block";   
    }
 
-   user1.quizEvilResult.push("a")
+    //user1.quizEvilResult.push("a")
+    user1.quizNameResult.push("a")
 
 });
 
@@ -259,8 +280,8 @@ eframe8b[0].addEventListener("click", function(){
        evilQuestions9.style.display = "block";   
    }
 
-   user1.quizEvilResult.push("b")
-   
+    //user1.quizEvilResult.push("b")
+    user1.quizNameResult.push("b")
    });
 //9
 eframe9a[0].addEventListener("click", function(){
@@ -269,7 +290,9 @@ eframe9a[0].addEventListener("click", function(){
        evilQuestions10.style.display = "block";   
    }
 
-   user1.quizEvilResult.push("a")
+    //user1.quizEvilResult.push("a")
+    user1.quizNameResult.push("a")
+    console.log(user1)
 
 });
 
@@ -279,8 +302,9 @@ eframe9b[0].addEventListener("click", function(){
        evilQuestions10.style.display = "block";   
    }
    
-   user1.quizEvilResult.push("b")
-
+    //user1.quizEvilResult.push("b")
+    user1.quizNameResult.push("b")
+    console.log(user1)
    });
 
 //10
@@ -289,10 +313,21 @@ eframe10a[0].addEventListener("click", function(){
    if (evilQuestions10.style.display === "block") {
        evilQuestions10.style.display = "none";
        evilOutro.style.display = "flex";
-         
+
+       user1.quizNameResult.push("a")
+
+       //localStorage.setItem("user1-EvilQuiz", JSON.stringify(user1.quizEvilResult))
+       //localStorage.setItem("user1-username", JSON.stringify(user1.username))
+
+       localStorage.setItem("user1Name", JSON.stringify(user1.userName))
+       localStorage.setItem("user1QuizName", JSON.stringify(user1.quizName))
+       localStorage.setItem("user1QuizNameResult", JSON.stringify(user1.quizNameResult))
+
+
    }
 
-   user1.quizEvilResult.push("a")
+    //user1.quizEvilResult.push("a")
+    //user1.quizNameResult.push("a")
 
 });
 
@@ -300,9 +335,39 @@ eframe10b[0].addEventListener("click", function(){
    if (evilQuestions10.style.display === "block") {
        evilQuestions10.style.display = "none";
        evilOutro.style.display = "flex";
-         
+    
+       user1.quizNameResult.push("b")
+
+    //localStorage.setItem("user1-EvilQuiz", JSON.stringify(user1.quizEvilResult))
+    //localStorage.setItem("user1-username", JSON.stringify(user1.username))
+
+    localStorage.setItem("user1Name", JSON.stringify(user1.userName))
+    localStorage.setItem("user1QuizName", JSON.stringify(user1.quizName))
+    localStorage.setItem("user1QuizNameResult", JSON.stringify(user1.quizNameResult))
+    
+    
    }
 
-   user1.quizEvilResult.push("b")
-       
+    //user1.quizEvilResult.push("b")
+    //user1.quizNameResult.push("b")
+    
    });
+
+   console.log(localStorage)
+
+//    if (localStorage.getItem("user1-EvilQuiz") !== null){
+
+//        console.log(localStorage.getItem("user1-EvilQuiz"))
+//     }
+
+    //localStorage.clear();
+
+
+    // boucle qui crée une nouvelle variable user à chaque fois qu'un nouveau nom est entré
+    // if le nom existe déjà > Alert("You've already completed this quiz, please answer another SoulQuiz! :)")
+    // else creer un nouvelle variable à partir du nouveau nom avec les clés de la première variable mais value vides
+
+
+   
+
+   

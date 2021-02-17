@@ -54,3 +54,4 @@ user1User2.overallScore = user1User2.quiz1Score + user1User2.quiz2Score
 
 compare (user1, user2, user1User2);
 console.log(user1User2)
+

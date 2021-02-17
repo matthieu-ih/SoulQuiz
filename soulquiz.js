@@ -9,7 +9,7 @@
 
  let cityOutro = document.getElementById("city-outro")
 
- let cityQuestions = document.getElementById("city-questions")
+ let cityQuestions1 = document.getElementById("city-questions1")
 
  let cityQuestions2 = document.getElementById("city-questions2")
 
@@ -41,9 +41,9 @@
         alert("Please enter your name");
     } else
     
-    if (cityQuestions.style.display === "none") {
+    if (cityQuestions1.style.display === "none") {
         
-        cityQuestions.style.display = "block";
+        cityQuestions1.style.display = "block";
         cityIntro.style.display = "none";
 
         user1.username = inputName.value;
@@ -93,16 +93,16 @@ let cframe10b = document.getElementsByClassName("cframe10b")
 //1
 
 cframe1a[0].addEventListener("click", function(){
-    if (cityQuestions.style.display === "block") {
-        cityQuestions.style.display = "none";
+    if (cityQuestions1.style.display === "block") {
+        cityQuestions1.style.display = "none";
         cityQuestions2.style.display = "block";   
     }
 user1.quizCityResult.push("a");
 });
 
 cframe1b[0].addEventListener("click", function(){
-    if (cityQuestions.style.display === "block") {
-        cityQuestions.style.display = "none";
+    if (cityQuestions1.style.display === "block") {
+        cityQuestions1.style.display = "none";
         cityQuestions2.style.display = "block";   
     }
     user1.quizCityResult.push("b");
