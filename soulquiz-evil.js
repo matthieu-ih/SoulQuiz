@@ -1456,20 +1456,177 @@ eframe10b[0].addEventListener("click", function(){
 ///////////////////////////////////
 
 
-function compare(userA, userB, userAUserB){
-    for (let i = 0; i < userA.quiz1.length; i++){
-      if ((userA.quiz1[i] === userB.quiz1[i]) && userA.quiz1[i] !== ""){
-        userAUserB.quiz1[i] = 1;
+function compare(userAEvilQuiz, userBEvilQuiz){
+    let EvilQuestionsMatch = [];
+    let EvilQuizMatch = 0;
+    for (let i = 0; i < userAEvilQuiz.length; i++){
+      if ((userAEvilQuiz[i] === userBEvilQuiz[i])){
+        //userAUserBEvilQuestionsMatch[i] = 10;
+        EvilQuestionsMatch.push(10);
       } else {
-        userAUserB.quiz1[i] = 0;
+        //userAUserBEvilQuestionsMatch[i] = 0;
+        EvilQuestionsMatch.push(0)
       }
     }
 
-    userAUserB.quiz1Score = userAUserB.quiz1.reduce(function(a, c){  
+    EvilQuizMatch = EvilQuestionsMatch.reduce(function(a, c){  
         return a + c ;
    
     });
 
+    return EvilQuizMatch;
 }
 
 
+
+console.log(JSON.parse(localStorage.user1evilQuizResult))
+console.log(JSON.parse(localStorage.user2evilQuizResult))
+console.log(typeof JSON.parse(localStorage.user2evilQuizResult))
+
+let user1Array = [];
+let user2Array = [];
+let user3Array = [];
+let user4Array = [];
+let user5Array = [];
+let user6Array = [];
+let user7Array = [];
+let user8Array = [];
+let user9Array = [];
+let user10Array = [];
+
+user1Array = JSON.parse(localStorage.user1evilQuizResult)
+user2Array = JSON.parse(localStorage.user2evilQuizResult)
+user3Array = JSON.parse(localStorage.user3evilQuizResult)
+user4Array = JSON.parse(localStorage.user4evilQuizResult)
+user5Array = JSON.parse(localStorage.user5evilQuizResult)
+user6Array = JSON.parse(localStorage.user6evilQuizResult)
+user7Array = JSON.parse(localStorage.user7evilQuizResult)
+user8Array = JSON.parse(localStorage.user8evilQuizResult)
+user9Array = JSON.parse(localStorage.user9evilQuizResult)
+user10Array = JSON.parse(localStorage.user10evilQuizResult)
+
+console.log(user2Array[0])
+
+// user1
+
+ let user1User2EvilMatch = compare(user1Array, user2Array)
+ let user1User3EvilMatch = compare(user1Array, user3Array)
+ let user1User4EvilMatch = compare(user1Array, user4Array)
+ let user1User5EvilMatch = compare(user1Array, user5Array)
+ let user1User6EvilMatch = compare(user1Array, user6Array)
+ let user1User7EvilMatch = compare(user1Array, user7Array)
+ let user1User8EvilMatch = compare(user1Array, user8Array)
+ let user1User9EvilMatch = compare(user1Array, user9Array)
+ let user1User10EvilMatch = compare(user1Array, user10Array)
+
+// user 2
+
+ let user2User3EvilMatch = compare(user2Array, user3Array)
+ let user2User4EvilMatch = compare(user2Array, user4Array)
+ let user2User5EvilMatch = compare(user2Array, user5Array)
+ let user2User6EvilMatch = compare(user2Array, user6Array)
+ let user2User7EvilMatch = compare(user2Array, user7Array)
+ let user2User8EvilMatch = compare(user2Array, user8Array)
+ let user2User9EvilMatch = compare(user2Array, user9Array)
+ let user2User10EvilMatch = compare(user2Array, user10Array)
+
+ // user 3
+
+ let user3User4EvilMatch = compare(user3Array, user4Array)
+ let user3User5EvilMatch = compare(user3Array, user5Array)
+ let user3User6EvilMatch = compare(user3Array, user6Array)
+ let user3User7EvilMatch = compare(user3Array, user7Array)
+ let user3User8EvilMatch = compare(user3Array, user8Array)
+ let user3User9EvilMatch = compare(user3Array, user9Array)
+ let user3User10EvilMatch = compare(user3Array, user10Array)
+
+ // user 4
+
+ let user4User5EvilMatch = compare(user4Array, user5Array)
+ let user4User6EvilMatch = compare(user4Array, user6Array)
+ let user4User7EvilMatch = compare(user4Array, user7Array)
+ let user4User8EvilMatch = compare(user4Array, user8Array)
+ let user4User9EvilMatch = compare(user4Array, user9Array)
+ let user4User10EvilMatch = compare(user4Array, user10Array)
+
+ // user 5
+
+ let user5User6EvilMatch = compare(user5Array, user6Array)
+ let user5User7EvilMatch = compare(user5Array, user7Array)
+ let user5User8EvilMatch = compare(user5Array, user8Array)
+ let user5User9EvilMatch = compare(user5Array, user9Array)
+ let user5User10EvilMatch = compare(user5Array, user10Array)
+
+ // user 6
+
+ let user6User7EvilMatch = compare(user6Array, user7Array)
+ let user6User8EvilMatch = compare(user6Array, user8Array)
+ let user6User9EvilMatch = compare(user6Array, user9Array)
+ let user6User10EvilMatch = compare(user6Array, user10Array)
+
+ // user 7
+
+ let user7User8EvilMatch = compare(user7Array, user8Array)
+ let user7User9EvilMatch = compare(user7Array, user9Array)
+ let user7User10EvilMatch = compare(user7Array, user10Array)
+
+ // user 8
+
+ let user8User9EvilMatch = compare(user8Array, user9Array)
+ let user8User10EvilMatch = compare(user8Array, user10Array)
+
+ // user 9
+
+ let user9User10EvilMatch = compare(user9Array, user10Array)
+
+
+ //let user1User2EvilMatch = compare(["a", "b", "a", "a", "b", "b", "b", "a", "a", "b"], ["a", "b", "a", "a", "b", "b", "b", "a", "a", "b"])
+
+ console.log(user1User2EvilMatch);
+
+
+ console.log(user1User2EvilMatch)
+ console.log(user1User3EvilMatch)
+ console.log(user1User4EvilMatch)
+ console.log(user1User5EvilMatch)
+ console.log(user1User6EvilMatch)
+ console.log(user1User7EvilMatch)
+ console.log(user1User8EvilMatch)
+ console.log(user1User9EvilMatch)
+ console.log(user1User10EvilMatch)
+ console.log(user2User3EvilMatch)
+ console.log(user2User4EvilMatch)
+ console.log(user2User5EvilMatch)
+ console.log(user2User6EvilMatch)
+ console.log(user2User7EvilMatch)
+ console.log(user2User8EvilMatch)
+ console.log(user2User9EvilMatch)
+ console.log(user2User10EvilMatch)
+ console.log(user3User4EvilMatch)
+ console.log(user3User5EvilMatch)
+ console.log(user3User6EvilMatch)
+ console.log(user3User7EvilMatch)
+ console.log(user3User8EvilMatch)
+ console.log(user3User9EvilMatch)
+ console.log(user3User10EvilMatch)
+ console.log(user4User5EvilMatch)
+ console.log(user4User6EvilMatch)
+ console.log(user4User7EvilMatch)
+ console.log(user4User8EvilMatch)
+ console.log(user4User9EvilMatch)
+ console.log(user4User10EvilMatch)
+ console.log(user5User6EvilMatch)
+ console.log(user5User7EvilMatch)
+ console.log(user5User8EvilMatch)
+ console.log(user5User9EvilMatch)
+ console.log(user5User10EvilMatch)
+ console.log(user6User7EvilMatch)
+ console.log(user6User8EvilMatch)
+ console.log(user6User9EvilMatch)
+ console.log(user6User10EvilMatch)
+ console.log(user7User8EvilMatch)
+ console.log(user7User9EvilMatch)
+ console.log(user7User10EvilMatch)
+ console.log(user8User9EvilMatch)
+ console.log(user8User10EvilMatch)
+ console.log(user9User10EvilMatch)
