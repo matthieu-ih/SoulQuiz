@@ -43,11 +43,21 @@ class User {
     constructor(userName, quizName){
         this.userName = userName;
         this.quizName = quizName;
-        this.quizNameResult = [];
+        this.evilQuizResult = [];
     }
 }
 
 let user1 = "";
+let user2 = "";
+let user3 = "";
+let user4 = "";
+let user5 = "";
+let user6 = "";
+let user7 = "";
+let user8 = "";
+let user9 = "";
+let user10 = "";
+
 
 letsGoButton.addEventListener("click", function(){
    if (inputName.value === ""){
@@ -58,15 +68,53 @@ letsGoButton.addEventListener("click", function(){
        evilQuestions1.style.display = "block";
        evilIntro.style.display = "none";
 
-        user1 = new User (inputName.value, 'EvilQuiz');
-        
-       console.log(inputName.value.replace(/ /g, ''));
+    // if (localStorage.user1Name === undefined){
+    //     user1 = new User (inputName.value, 'EvilQuiz');
+    // } else 
+    //     if (localStorage.user1Name !== undefined){
+    //     user2 = new User (inputName.value, 'EvilQuiz');
+    //     } 
+
+
+       //console.log(inputName.value.replace(/ /g, ''));
 
    }
+
+   if (localStorage.user1Name === undefined){
+    user1 = new User (inputName.value, 'EvilQuiz');
+    } //else 
+    if (localStorage.user1Name !== undefined){
+    user2 = new User (inputName.value, 'EvilQuiz');
+    } //else 
+    if ((localStorage.user1Name && localStorage.user2Name) !== undefined){
+    user3 = new User (inputName.value, 'EvilQuiz');
+    } //else 
+    if ((localStorage.user1Name && localStorage.user2Name && localStorage.user3Name) !== undefined){
+    user4 = new User (inputName.value, 'EvilQuiz');
+    } //else 
+    if ((localStorage.user1Name && localStorage.user2Name && localStorage.user3Name  && localStorage.user4Name) !== undefined){
+    user5 = new User (inputName.value, 'EvilQuiz');
+    } //else 
+    if ((localStorage.user1Name && localStorage.user2Name && localStorage.user3Name  && localStorage.user4Name && localStorage.user5Name) !== undefined){
+    user6 = new User (inputName.value, 'EvilQuiz');
+    } //else 
+    if ((localStorage.user1Name && localStorage.user2Name && localStorage.user3Name  && localStorage.user4Name && localStorage.user5Name && localStorage.user6Name) !== undefined){
+    user7 = new User (inputName.value, 'EvilQuiz');
+    } //else 
+    if ((localStorage.user1Name && localStorage.user2Name && localStorage.user3Name  && localStorage.user4Name && localStorage.user5Name && localStorage.user6Name && localStorage.user7Name) !== undefined){
+    user8 = new User (inputName.value, 'EvilQuiz');
+    } //else 
+    if ((localStorage.user1Name && localStorage.user2Name && localStorage.user3Name  && localStorage.user4Name && localStorage.user5Name && localStorage.user6Name && localStorage.user7Name && localStorage.user8Name) !== undefined){
+    user9 = new User (inputName.value, 'EvilQuiz');
+    } //else 
+    if ((localStorage.user1Name && localStorage.user2Name && localStorage.user3Name  && localStorage.user4Name && localStorage.user5Name && localStorage.user6Name && localStorage.user7Name && localStorage.user8Name && localStorage.user9Name) !== undefined){
+    user10 = new User (inputName.value, 'EvilQuiz');
+    } 
    
 })
 
-console.log(user1);
+//console.log(user1);
+//console.log(user2);
 
 
 let eframe1a = document.getElementsByClassName("eframe1a")
@@ -109,9 +157,56 @@ eframe1a[0].addEventListener("click", function(){
    }
 
     //user1.quizEvilResult.push("a")
-    user1.quizNameResult.push("a")
+
+    if (localStorage.user1Name === undefined){
+    user1.evilQuizResult.push("a")
     console.log(user1)
-   
+    }
+
+    if ((localStorage.user2Name === undefined) && (user2 !== "")){
+    user2.evilQuizResult.push("a")
+    console.log(user2)
+    } else
+
+    if ((localStorage.user3Name === undefined) && (user3 !== "")){
+        user3.evilQuizResult.push("a")
+        console.log(user3)
+        }
+
+        if ((localStorage.user4Name === undefined) && (user4 !== "")){
+            user4.evilQuizResult.push("a")
+            console.log(user4)
+            }
+
+            if ((localStorage.user5Name === undefined) && (user5 !== "")){
+                user5.evilQuizResult.push("a")
+                console.log(user5)
+                }
+
+                if ((localStorage.user6Name === undefined) && (user6 !== "")){
+                    user6.evilQuizResult.push("a")
+                    console.log(user6)
+                    }
+
+                    if ((localStorage.user7Name === undefined) && (user7 !== "")){
+                        user7.evilQuizResult.push("a")
+                        console.log(user7)
+                        }
+
+                        if ((localStorage.user8Name === undefined) && (user8 !== "")){
+                            user8.evilQuizResult.push("a")
+                            console.log(user8)
+                            }
+
+                            if ((localStorage.user9Name === undefined) && (user9 !== "")){
+                                user9.evilQuizResult.push("a")
+                                console.log(user9)
+                                }
+
+                                if ((localStorage.user10Name === undefined) && (user10 !== "")){
+                                    user10.evilQuizResult.push("a")
+                                    console.log(user10)
+                                    }
 
 });
 
@@ -122,8 +217,55 @@ eframe1b[0].addEventListener("click", function(){
    }
    
    //user1.quizEvilResult.push("b")
-   user1.quizNameResult.push("b")
+   if (localStorage.user1Name === undefined){
+   user1.evilQuizResult.push("b")
    console.log(user1)
+    }
+
+   if ((localStorage.user2Name === undefined) && (user2 !== "")){
+   user2.evilQuizResult.push("b")
+   console.log(user2)
+    } else
+
+    if ((localStorage.user3Name === undefined) && (user3 !== "")){
+        user3.evilQuizResult.push("b")
+        console.log(user3)
+        }
+
+        if ((localStorage.user4Name === undefined) && (user4 !== "")){
+            user4.evilQuizResult.push("b")
+            console.log(user4)
+            }
+
+            if ((localStorage.user5Name === undefined) && (user5 !== "")){
+                user5.evilQuizResult.push("b")
+                console.log(user5)
+                }
+
+                if ((localStorage.user6Name === undefined) && (user6 !== "")){
+                    user6.evilQuizResult.push("b")
+                    console.log(user6)
+                    }
+
+                    if ((localStorage.user7Name === undefined) && (user7 !== "")){
+                        user7.evilQuizResult.push("b")
+                        console.log(user7)
+                        }
+
+                        if ((localStorage.user8Name === undefined) && (user8 !== "")){
+                            user8.evilQuizResult.push("b")
+                            console.log(user8)
+                            }
+
+                            if ((localStorage.user9Name === undefined) && (user9 !== "")){
+                                user9.evilQuizResult.push("b")
+                                console.log(user9)
+                                }
+
+                                if ((localStorage.user10Name === undefined) && (user10 !== "")){
+                                    user10.evilQuizResult.push("b")
+                                    console.log(user10)
+                                    }
 
    });
 
@@ -137,7 +279,53 @@ eframe2a[0].addEventListener("click", function(){
    }
 
     //user1.quizEvilResult.push("a")
-    user1.quizNameResult.push("a")
+    if (localStorage.user1Name === undefined){
+    user1.evilQuizResult.push("a")
+    }
+
+    if ((localStorage.user2Name === undefined) && (user2 !== "")){
+    user2.evilQuizResult.push("a")
+}
+
+if ((localStorage.user3Name === undefined) && (user3 !== "")){
+    user3.evilQuizResult.push("a")
+    console.log(user3)
+    }
+
+    if ((localStorage.user4Name === undefined) && (user4 !== "")){
+        user4.evilQuizResult.push("a")
+        console.log(user4)
+        }
+
+        if ((localStorage.user5Name === undefined) && (user5 !== "")){
+            user5.evilQuizResult.push("a")
+            console.log(user5)
+            }
+
+            if ((localStorage.user6Name === undefined) && (user6 !== "")){
+                user6.evilQuizResult.push("a")
+                console.log(user6)
+                }
+
+                if ((localStorage.user7Name === undefined) && (user7 !== "")){
+                    user7.evilQuizResult.push("a")
+                    console.log(user7)
+                    }
+
+                    if ((localStorage.user8Name === undefined) && (user8 !== "")){
+                        user8.evilQuizResult.push("a")
+                        console.log(user8)
+                        }
+
+                        if ((localStorage.user9Name === undefined) && (user9 !== "")){
+                            user9.evilQuizResult.push("a")
+                            console.log(user9)
+                            }
+
+                            if ((localStorage.user10Name === undefined) && (user10 !== "")){
+                                user10.evilQuizResult.push("a")
+                                console.log(user10)
+                                }
 
 });
 
@@ -148,7 +336,51 @@ eframe2b[0].addEventListener("click", function(){
    }
 
     //user1.quizEvilResult.push("b")
-    user1.quizNameResult.push("b")
+    if (localStorage.user1Name === undefined){
+    user1.evilQuizResult.push("b")
+    }
+    if ((localStorage.user2Name === undefined) && (user2 !== "")){
+    user2.evilQuizResult.push("b")
+}
+if ((localStorage.user3Name === undefined) && (user3 !== "")){
+    user3.evilQuizResult.push("b")
+    console.log(user3)
+    }
+
+    if ((localStorage.user4Name === undefined) && (user4 !== "")){
+        user4.evilQuizResult.push("b")
+        console.log(user4)
+        }
+
+        if ((localStorage.user5Name === undefined) && (user5 !== "")){
+            user5.evilQuizResult.push("b")
+            console.log(user5)
+            }
+
+            if ((localStorage.user6Name === undefined) && (user6 !== "")){
+                user6.evilQuizResult.push("b")
+                console.log(user6)
+                }
+
+                if ((localStorage.user7Name === undefined) && (user7 !== "")){
+                    user7.evilQuizResult.push("b")
+                    console.log(user7)
+                    }
+
+                    if ((localStorage.user8Name === undefined) && (user8 !== "")){
+                        user8.evilQuizResult.push("b")
+                        console.log(user8)
+                        }
+
+                        if ((localStorage.user9Name === undefined) && (user9 !== "")){
+                            user9.evilQuizResult.push("b")
+                            console.log(user9)
+                            }
+
+                            if ((localStorage.user10Name === undefined) && (user10 !== "")){
+                                user10.evilQuizResult.push("b")
+                                console.log(user10)
+                                }
    });
 
 //3
@@ -160,7 +392,52 @@ eframe3a[0].addEventListener("click", function(){
    }
 
     //user1.quizEvilResult.push("a")
-    user1.quizNameResult.push("a")
+    if (localStorage.user1Name === undefined){
+    user1.evilQuizResult.push("a")
+    }
+    if ((localStorage.user2Name === undefined) && (user2 !== "")){
+    user2.evilQuizResult.push("a")
+}
+
+if ((localStorage.user3Name === undefined) && (user3 !== "")){
+    user3.evilQuizResult.push("a")
+    console.log(user3)
+    }
+
+    if ((localStorage.user4Name === undefined) && (user4 !== "")){
+        user4.evilQuizResult.push("a")
+        console.log(user4)
+        }
+
+        if ((localStorage.user5Name === undefined) && (user5 !== "")){
+            user5.evilQuizResult.push("a")
+            console.log(user5)
+            }
+
+            if ((localStorage.user6Name === undefined) && (user6 !== "")){
+                user6.evilQuizResult.push("a")
+                console.log(user6)
+                }
+
+                if ((localStorage.user7Name === undefined) && (user7 !== "")){
+                    user7.evilQuizResult.push("a")
+                    console.log(user7)
+                    }
+
+                    if ((localStorage.user8Name === undefined) && (user8 !== "")){
+                        user8.evilQuizResult.push("a")
+                        console.log(user8)
+                        }
+
+                        if ((localStorage.user9Name === undefined) && (user9 !== "")){
+                            user9.evilQuizResult.push("a")
+                            console.log(user9)
+                            }
+
+                            if ((localStorage.user10Name === undefined) && (user10 !== "")){
+                                user10.evilQuizResult.push("a")
+                                console.log(user10)
+                                }
 
 });
 
@@ -171,7 +448,51 @@ eframe3b[0].addEventListener("click", function(){
    }
    
     //user1.quizEvilResult.push("b")
-    user1.quizNameResult.push("b")
+    if (localStorage.user1Name === undefined){
+    user1.evilQuizResult.push("b")
+    }
+    if ((localStorage.user2Name === undefined) && (user2 !== "")){
+    user2.evilQuizResult.push("b")
+}
+if ((localStorage.user3Name === undefined) && (user3 !== "")){
+    user3.evilQuizResult.push("b")
+    console.log(user3)
+    }
+
+    if ((localStorage.user4Name === undefined) && (user4 !== "")){
+        user4.evilQuizResult.push("b")
+        console.log(user4)
+        }
+
+        if ((localStorage.user5Name === undefined) && (user5 !== "")){
+            user5.evilQuizResult.push("b")
+            console.log(user5)
+            }
+
+            if ((localStorage.user6Name === undefined) && (user6 !== "")){
+                user6.evilQuizResult.push("b")
+                console.log(user6)
+                }
+
+                if ((localStorage.user7Name === undefined) && (user7 !== "")){
+                    user7.evilQuizResult.push("b")
+                    console.log(user7)
+                    }
+
+                    if ((localStorage.user8Name === undefined) && (user8 !== "")){
+                        user8.evilQuizResult.push("b")
+                        console.log(user8)
+                        }
+
+                        if ((localStorage.user9Name === undefined) && (user9 !== "")){
+                            user9.evilQuizResult.push("b")
+                            console.log(user9)
+                            }
+
+                            if ((localStorage.user10Name === undefined) && (user10 !== "")){
+                                user10.evilQuizResult.push("b")
+                                console.log(user10)
+                                }
    });
 //4
 eframe4a[0].addEventListener("click", function(){
@@ -181,7 +502,52 @@ eframe4a[0].addEventListener("click", function(){
    }
 
     //user1.quizEvilResult.push("a")
-    user1.quizNameResult.push("a")
+    if (localStorage.user1Name === undefined){
+    user1.evilQuizResult.push("a")
+    }
+    if ((localStorage.user2Name === undefined) && (user2 !== "")){
+    user2.evilQuizResult.push("a")
+}
+
+if ((localStorage.user3Name === undefined) && (user3 !== "")){
+    user3.evilQuizResult.push("a")
+    console.log(user3)
+    }
+
+    if ((localStorage.user4Name === undefined) && (user4 !== "")){
+        user4.evilQuizResult.push("a")
+        console.log(user4)
+        }
+
+        if ((localStorage.user5Name === undefined) && (user5 !== "")){
+            user5.evilQuizResult.push("a")
+            console.log(user5)
+            }
+
+            if ((localStorage.user6Name === undefined) && (user6 !== "")){
+                user6.evilQuizResult.push("a")
+                console.log(user6)
+                }
+
+                if ((localStorage.user7Name === undefined) && (user7 !== "")){
+                    user7.evilQuizResult.push("a")
+                    console.log(user7)
+                    }
+
+                    if ((localStorage.user8Name === undefined) && (user8 !== "")){
+                        user8.evilQuizResult.push("a")
+                        console.log(user8)
+                        }
+
+                        if ((localStorage.user9Name === undefined) && (user9 !== "")){
+                            user9.evilQuizResult.push("a")
+                            console.log(user9)
+                            }
+
+                            if ((localStorage.user10Name === undefined) && (user10 !== "")){
+                                user10.evilQuizResult.push("a")
+                                console.log(user10)
+                                }
 
 });
 
@@ -192,7 +558,51 @@ eframe4b[0].addEventListener("click", function(){
    }
    
     //user1.quizEvilResult.push("b")
-    user1.quizNameResult.push("b")
+    if (localStorage.user1Name === undefined){
+    user1.evilQuizResult.push("b")
+    }
+    if ((localStorage.user2Name === undefined) && (user2 !== "")){
+    user2.evilQuizResult.push("b")
+}
+if ((localStorage.user3Name === undefined) && (user3 !== "")){
+    user3.evilQuizResult.push("b")
+    console.log(user3)
+    }
+
+    if ((localStorage.user4Name === undefined) && (user4 !== "")){
+        user4.evilQuizResult.push("b")
+        console.log(user4)
+        }
+
+        if ((localStorage.user5Name === undefined) && (user5 !== "")){
+            user5.evilQuizResult.push("b")
+            console.log(user5)
+            }
+
+            if ((localStorage.user6Name === undefined) && (user6 !== "")){
+                user6.evilQuizResult.push("b")
+                console.log(user6)
+                }
+
+                if ((localStorage.user7Name === undefined) && (user7 !== "")){
+                    user7.evilQuizResult.push("b")
+                    console.log(user7)
+                    }
+
+                    if ((localStorage.user8Name === undefined) && (user8 !== "")){
+                        user8.evilQuizResult.push("b")
+                        console.log(user8)
+                        }
+
+                        if ((localStorage.user9Name === undefined) && (user9 !== "")){
+                            user9.evilQuizResult.push("b")
+                            console.log(user9)
+                            }
+
+                            if ((localStorage.user10Name === undefined) && (user10 !== "")){
+                                user10.evilQuizResult.push("b")
+                                console.log(user10)
+                                }
    });
 
 //5
@@ -203,7 +613,53 @@ eframe5a[0].addEventListener("click", function(){
    }
 
     //user1.quizEvilResult.push("a")
-    user1.quizNameResult.push("a")
+    if (localStorage.user1Name === undefined){
+    user1.evilQuizResult.push("a")
+    }
+
+    if ((localStorage.user2Name === undefined) && (user2 !== "")){
+    user2.evilQuizResult.push("a")
+}
+
+if ((localStorage.user3Name === undefined) && (user3 !== "")){
+    user3.evilQuizResult.push("a")
+    console.log(user3)
+    }
+
+    if ((localStorage.user4Name === undefined) && (user4 !== "")){
+        user4.evilQuizResult.push("a")
+        console.log(user4)
+        }
+
+        if ((localStorage.user5Name === undefined) && (user5 !== "")){
+            user5.evilQuizResult.push("a")
+            console.log(user5)
+            }
+
+            if ((localStorage.user6Name === undefined) && (user6 !== "")){
+                user6.evilQuizResult.push("a")
+                console.log(user6)
+                }
+
+                if ((localStorage.user7Name === undefined) && (user7 !== "")){
+                    user7.evilQuizResult.push("a")
+                    console.log(user7)
+                    }
+
+                    if ((localStorage.user8Name === undefined) && (user8 !== "")){
+                        user8.evilQuizResult.push("a")
+                        console.log(user8)
+                        }
+
+                        if ((localStorage.user9Name === undefined) && (user9 !== "")){
+                            user9.evilQuizResult.push("a")
+                            console.log(user9)
+                            }
+
+                            if ((localStorage.user10Name === undefined) && (user10 !== "")){
+                                user10.evilQuizResult.push("a")
+                                console.log(user10)
+                                }
 
 });
 
@@ -214,7 +670,53 @@ eframe5b[0].addEventListener("click", function(){
    }
 
     //user1.quizEvilResult.push("b")
-    user1.quizNameResult.push("b")
+    if (localStorage.user1Name === undefined){
+    user1.evilQuizResult.push("b")
+    }
+
+    if ((localStorage.user2Name === undefined) && (user2 !== "")){
+    user2.evilQuizResult.push("b")
+}
+
+if ((localStorage.user3Name === undefined) && (user3 !== "")){
+    user3.evilQuizResult.push("b")
+    console.log(user3)
+    }
+
+    if ((localStorage.user4Name === undefined) && (user4 !== "")){
+        user4.evilQuizResult.push("b")
+        console.log(user4)
+        }
+
+        if ((localStorage.user5Name === undefined) && (user5 !== "")){
+            user5.evilQuizResult.push("b")
+            console.log(user5)
+            }
+
+            if ((localStorage.user6Name === undefined) && (user6 !== "")){
+                user6.evilQuizResult.push("b")
+                console.log(user6)
+                }
+
+                if ((localStorage.user7Name === undefined) && (user7 !== "")){
+                    user7.evilQuizResult.push("b")
+                    console.log(user7)
+                    }
+
+                    if ((localStorage.user8Name === undefined) && (user8 !== "")){
+                        user8.evilQuizResult.push("b")
+                        console.log(user8)
+                        }
+
+                        if ((localStorage.user9Name === undefined) && (user9 !== "")){
+                            user9.evilQuizResult.push("b")
+                            console.log(user9)
+                            }
+
+                            if ((localStorage.user10Name === undefined) && (user10 !== "")){
+                                user10.evilQuizResult.push("b")
+                                console.log(user10)
+                                }
    });
 
 //6
@@ -225,7 +727,53 @@ eframe6a[0].addEventListener("click", function(){
    }
 
     //user1.quizEvilResult.push("a")
-    user1.quizNameResult.push("a")
+    if (localStorage.user1Name === undefined){
+    user1.evilQuizResult.push("a")
+    }
+
+    if ((localStorage.user2Name === undefined) && (user2 !== "")){
+    user2.evilQuizResult.push("a")
+}
+
+if ((localStorage.user3Name === undefined) && (user3 !== "")){
+    user3.evilQuizResult.push("a")
+    console.log(user3)
+    }
+
+    if ((localStorage.user4Name === undefined) && (user4 !== "")){
+        user4.evilQuizResult.push("a")
+        console.log(user4)
+        }
+
+        if ((localStorage.user5Name === undefined) && (user5 !== "")){
+            user5.evilQuizResult.push("a")
+            console.log(user5)
+            }
+
+            if ((localStorage.user6Name === undefined) && (user6 !== "")){
+                user6.evilQuizResult.push("a")
+                console.log(user6)
+                }
+
+                if ((localStorage.user7Name === undefined) && (user7 !== "")){
+                    user7.evilQuizResult.push("a")
+                    console.log(user7)
+                    }
+
+                    if ((localStorage.user8Name === undefined) && (user8 !== "")){
+                        user8.evilQuizResult.push("a")
+                        console.log(user8)
+                        }
+
+                        if ((localStorage.user9Name === undefined) && (user9 !== "")){
+                            user9.evilQuizResult.push("a")
+                            console.log(user9)
+                            }
+
+                            if ((localStorage.user10Name === undefined) && (user10 !== "")){
+                                user10.evilQuizResult.push("a")
+                                console.log(user10)
+                                }
 
 });
 
@@ -236,7 +784,53 @@ eframe6b[0].addEventListener("click", function(){
    }
    
     //user1.quizEvilResult.push("b")
-    user1.quizNameResult.push("b")
+    if (localStorage.user1Name === undefined){
+    user1.evilQuizResult.push("b")
+    }
+
+    if ((localStorage.user2Name === undefined) && (user2 !== "")){
+    user2.evilQuizResult.push("b")
+}
+
+if ((localStorage.user3Name === undefined) && (user3 !== "")){
+    user3.evilQuizResult.push("b")
+    console.log(user3)
+    }
+
+    if ((localStorage.user4Name === undefined) && (user4 !== "")){
+        user4.evilQuizResult.push("b")
+        console.log(user4)
+        }
+
+        if ((localStorage.user5Name === undefined) && (user5 !== "")){
+            user5.evilQuizResult.push("b")
+            console.log(user5)
+            }
+
+            if ((localStorage.user6Name === undefined) && (user6 !== "")){
+                user6.evilQuizResult.push("b")
+                console.log(user6)
+                }
+
+                if ((localStorage.user7Name === undefined) && (user7 !== "")){
+                    user7.evilQuizResult.push("b")
+                    console.log(user7)
+                    }
+
+                    if ((localStorage.user8Name === undefined) && (user8 !== "")){
+                        user8.evilQuizResult.push("b")
+                        console.log(user8)
+                        }
+
+                        if ((localStorage.user9Name === undefined) && (user9 !== "")){
+                            user9.evilQuizResult.push("b")
+                            console.log(user9)
+                            }
+
+                            if ((localStorage.user10Name === undefined) && (user10 !== "")){
+                                user10.evilQuizResult.push("b")
+                                console.log(user10)
+                                }
    });
 
 //7
@@ -247,7 +841,53 @@ eframe7a[0].addEventListener("click", function(){
    }
 
     //user1.quizEvilResult.push("a")
-    user1.quizNameResult.push("a")
+    if (localStorage.user1Name === undefined){
+    user1.evilQuizResult.push("a")
+    }
+
+    if ((localStorage.user2Name === undefined) && (user2 !== "")){
+    user2.evilQuizResult.push("a")
+}
+
+if ((localStorage.user3Name === undefined) && (user3 !== "")){
+    user3.evilQuizResult.push("a")
+    console.log(user3)
+    }
+
+    if ((localStorage.user4Name === undefined) && (user4 !== "")){
+        user4.evilQuizResult.push("a")
+        console.log(user4)
+        }
+
+        if ((localStorage.user5Name === undefined) && (user5 !== "")){
+            user5.evilQuizResult.push("a")
+            console.log(user5)
+            }
+
+            if ((localStorage.user6Name === undefined) && (user6 !== "")){
+                user6.evilQuizResult.push("a")
+                console.log(user6)
+                }
+
+                if ((localStorage.user7Name === undefined) && (user7 !== "")){
+                    user7.evilQuizResult.push("a")
+                    console.log(user7)
+                    }
+
+                    if ((localStorage.user8Name === undefined) && (user8 !== "")){
+                        user8.evilQuizResult.push("a")
+                        console.log(user8)
+                        }
+
+                        if ((localStorage.user9Name === undefined) && (user9 !== "")){
+                            user9.evilQuizResult.push("a")
+                            console.log(user9)
+                            }
+
+                            if ((localStorage.user10Name === undefined) && (user10 !== "")){
+                                user10.evilQuizResult.push("a")
+                                console.log(user10)
+                                }
 
 });
 
@@ -258,7 +898,52 @@ eframe7b[0].addEventListener("click", function(){
    }
    
     //user1.quizEvilResult.push("b")
-    user1.quizNameResult.push("b")
+    if (localStorage.user1Name === undefined){
+    user1.evilQuizResult.push("b")
+    }
+
+    if ((localStorage.user2Name === undefined) && (user2 !== "")){
+    user2.evilQuizResult.push("b")
+}
+if ((localStorage.user3Name === undefined) && (user3 !== "")){
+    user3.evilQuizResult.push("b")
+    console.log(user3)
+    }
+
+    if ((localStorage.user4Name === undefined) && (user4 !== "")){
+        user4.evilQuizResult.push("b")
+        console.log(user4)
+        }
+
+        if ((localStorage.user5Name === undefined) && (user5 !== "")){
+            user5.evilQuizResult.push("b")
+            console.log(user5)
+            }
+
+            if ((localStorage.user6Name === undefined) && (user6 !== "")){
+                user6.evilQuizResult.push("b")
+                console.log(user6)
+                }
+
+                if ((localStorage.user7Name === undefined) && (user7 !== "")){
+                    user7.evilQuizResult.push("b")
+                    console.log(user7)
+                    }
+
+                    if ((localStorage.user8Name === undefined) && (user8 !== "")){
+                        user8.evilQuizResult.push("b")
+                        console.log(user8)
+                        }
+
+                        if ((localStorage.user9Name === undefined) && (user9 !== "")){
+                            user9.evilQuizResult.push("b")
+                            console.log(user9)
+                            }
+
+                            if ((localStorage.user10Name === undefined) && (user10 !== "")){
+                                user10.evilQuizResult.push("b")
+                                console.log(user10)
+                                }
    });
 
 //8
@@ -270,8 +955,53 @@ eframe8a[0].addEventListener("click", function(){
    }
 
     //user1.quizEvilResult.push("a")
-    user1.quizNameResult.push("a")
+    if (localStorage.user1Name === undefined){
+    user1.evilQuizResult.push("a")
+    }
 
+    if ((localStorage.user2Name === undefined) && (user2 !== "")){
+    user2.evilQuizResult.push("a")
+}
+
+if ((localStorage.user3Name === undefined) && (user3 !== "")){
+    user3.evilQuizResult.push("a")
+    console.log(user3)
+    }
+
+    if ((localStorage.user4Name === undefined) && (user4 !== "")){
+        user4.evilQuizResult.push("a")
+        console.log(user4)
+        }
+
+        if ((localStorage.user5Name === undefined) && (user5 !== "")){
+            user5.evilQuizResult.push("a")
+            console.log(user5)
+            }
+
+            if ((localStorage.user6Name === undefined) && (user6 !== "")){
+                user6.evilQuizResult.push("a")
+                console.log(user6)
+                }
+
+                if ((localStorage.user7Name === undefined) && (user7 !== "")){
+                    user7.evilQuizResult.push("a")
+                    console.log(user7)
+                    }
+
+                    if ((localStorage.user8Name === undefined) && (user8 !== "")){
+                        user8.evilQuizResult.push("a")
+                        console.log(user8)
+                        }
+
+                        if ((localStorage.user9Name === undefined) && (user9 !== "")){
+                            user9.evilQuizResult.push("a")
+                            console.log(user9)
+                            }
+
+                            if ((localStorage.user10Name === undefined) && (user10 !== "")){
+                                user10.evilQuizResult.push("a")
+                                console.log(user10)
+                                }
 });
 
 eframe8b[0].addEventListener("click", function(){
@@ -281,7 +1011,53 @@ eframe8b[0].addEventListener("click", function(){
    }
 
     //user1.quizEvilResult.push("b")
-    user1.quizNameResult.push("b")
+    if (localStorage.user1Name === undefined){
+    user1.evilQuizResult.push("b")
+    }
+
+    if ((localStorage.user2Name === undefined) && (user2 !== "")){
+    user2.evilQuizResult.push("b")
+}
+
+if ((localStorage.user3Name === undefined) && (user3 !== "")){
+    user3.evilQuizResult.push("b")
+    console.log(user3)
+    }
+
+    if ((localStorage.user4Name === undefined) && (user4 !== "")){
+        user4.evilQuizResult.push("b")
+        console.log(user4)
+        }
+
+        if ((localStorage.user5Name === undefined) && (user5 !== "")){
+            user5.evilQuizResult.push("b")
+            console.log(user5)
+            }
+
+            if ((localStorage.user6Name === undefined) && (user6 !== "")){
+                user6.evilQuizResult.push("b")
+                console.log(user6)
+                }
+
+                if ((localStorage.user7Name === undefined) && (user7 !== "")){
+                    user7.evilQuizResult.push("b")
+                    console.log(user7)
+                    }
+
+                    if ((localStorage.user8Name === undefined) && (user8 !== "")){
+                        user8.evilQuizResult.push("b")
+                        console.log(user8)
+                        }
+
+                        if ((localStorage.user9Name === undefined) && (user9 !== "")){
+                            user9.evilQuizResult.push("b")
+                            console.log(user9)
+                            }
+
+                            if ((localStorage.user10Name === undefined) && (user10 !== "")){
+                                user10.evilQuizResult.push("b")
+                                console.log(user10)
+                                }
    });
 //9
 eframe9a[0].addEventListener("click", function(){
@@ -291,8 +1067,53 @@ eframe9a[0].addEventListener("click", function(){
    }
 
     //user1.quizEvilResult.push("a")
-    user1.quizNameResult.push("a")
-    console.log(user1)
+    if (localStorage.user1Name === undefined){
+    user1.evilQuizResult.push("a")
+    }
+
+    if ((localStorage.user2Name === undefined) && (user2 !== "")){
+    user2.evilQuizResult.push("a")
+}
+
+if ((localStorage.user3Name === undefined) && (user3 !== "")){
+    user3.evilQuizResult.push("a")
+    console.log(user3)
+    }
+
+    if ((localStorage.user4Name === undefined) && (user4 !== "")){
+        user4.evilQuizResult.push("a")
+        console.log(user4)
+        }
+
+        if ((localStorage.user5Name === undefined) && (user5 !== "")){
+            user5.evilQuizResult.push("a")
+            console.log(user5)
+            }
+
+            if ((localStorage.user6Name === undefined) && (user6 !== "")){
+                user6.evilQuizResult.push("a")
+                console.log(user6)
+                }
+
+                if ((localStorage.user7Name === undefined) && (user7 !== "")){
+                    user7.evilQuizResult.push("a")
+                    console.log(user7)
+                    }
+
+                    if ((localStorage.user8Name === undefined) && (user8 !== "")){
+                        user8.evilQuizResult.push("a")
+                        console.log(user8)
+                        }
+
+                        if ((localStorage.user9Name === undefined) && (user9 !== "")){
+                            user9.evilQuizResult.push("a")
+                            console.log(user9)
+                            }
+
+                            if ((localStorage.user10Name === undefined) && (user10 !== "")){
+                                user10.evilQuizResult.push("a")
+                                console.log(user10)
+                                }
 
 });
 
@@ -303,8 +1124,53 @@ eframe9b[0].addEventListener("click", function(){
    }
    
     //user1.quizEvilResult.push("b")
-    user1.quizNameResult.push("b")
-    console.log(user1)
+    if (localStorage.user1Name === undefined){
+    user1.evilQuizResult.push("b")
+    }
+
+    if ((localStorage.user2Name === undefined) && (user2 !== "")){
+    user2.evilQuizResult.push("b")
+}
+
+if ((localStorage.user3Name === undefined) && (user3 !== "")){
+    user3.evilQuizResult.push("b")
+    console.log(user3)
+    }
+
+    if ((localStorage.user4Name === undefined) && (user4 !== "")){
+        user4.evilQuizResult.push("b")
+        console.log(user4)
+        }
+
+        if ((localStorage.user5Name === undefined) && (user5 !== "")){
+            user5.evilQuizResult.push("b")
+            console.log(user5)
+            }
+
+            if ((localStorage.user6Name === undefined) && (user6 !== "")){
+                user6.evilQuizResult.push("b")
+                console.log(user6)
+                }
+
+                if ((localStorage.user7Name === undefined) && (user7 !== "")){
+                    user7.evilQuizResult.push("b")
+                    console.log(user7)
+                    }
+
+                    if ((localStorage.user8Name === undefined) && (user8 !== "")){
+                        user8.evilQuizResult.push("b")
+                        console.log(user8)
+                        }
+
+                        if ((localStorage.user9Name === undefined) && (user9 !== "")){
+                            user9.evilQuizResult.push("b")
+                            console.log(user9)
+                            }
+
+                            if ((localStorage.user10Name === undefined) && (user10 !== "")){
+                                user10.evilQuizResult.push("b")
+                                console.log(user10)
+                                }
    });
 
 //10
@@ -314,20 +1180,133 @@ eframe10a[0].addEventListener("click", function(){
        evilQuestions10.style.display = "none";
        evilOutro.style.display = "flex";
 
-       user1.quizNameResult.push("a")
+       if (localStorage.user1Name === undefined){
+       user1.evilQuizResult.push("a")
+       console.log(user1)
+       }
+
+       if ((localStorage.user2Name === undefined) && (user2 !== "")){
+       user2.evilQuizResult.push("a")
+       console.log(user2)
+    }
+
+    if ((localStorage.user3Name === undefined) && (user3 !== "")){
+        user3.evilQuizResult.push("a")
+        console.log(user3)
+        }
+
+        if ((localStorage.user4Name === undefined) && (user4 !== "")){
+            user4.evilQuizResult.push("a")
+            console.log(user4)
+            }
+
+            if ((localStorage.user5Name === undefined) && (user5 !== "")){
+                user5.evilQuizResult.push("a")
+                console.log(user5)
+                }
+
+                if ((localStorage.user6Name === undefined) && (user6 !== "")){
+                    user6.evilQuizResult.push("a")
+                    console.log(user6)
+                    }
+
+                    if ((localStorage.user7Name === undefined) && (user7 !== "")){
+                        user7.evilQuizResult.push("a")
+                        console.log(user7)
+                        }
+
+                        if ((localStorage.user8Name === undefined) && (user8 !== "")){
+                            user8.evilQuizResult.push("a")
+                            console.log(user8)
+                            }
+
+                            if ((localStorage.user9Name === undefined) && (user9 !== "")){
+                                user9.evilQuizResult.push("a")
+                                console.log(user9)
+                                }
+
+                                if ((localStorage.user10Name === undefined) && (user10 !== "")){
+                                    user10.evilQuizResult.push("a")
+                                    console.log(user10)
+                                    }
 
        //localStorage.setItem("user1-EvilQuiz", JSON.stringify(user1.quizEvilResult))
        //localStorage.setItem("user1-username", JSON.stringify(user1.username))
 
+       if (localStorage.user1Name === undefined){
        localStorage.setItem("user1Name", JSON.stringify(user1.userName))
        localStorage.setItem("user1QuizName", JSON.stringify(user1.quizName))
-       localStorage.setItem("user1QuizNameResult", JSON.stringify(user1.quizNameResult))
+       localStorage.setItem("user1evilQuizResult", JSON.stringify(user1.evilQuizResult))
+    } else
+
+    if ((localStorage.user2Name === undefined) && (user2 !== "")){
+       localStorage.setItem("user2Name", JSON.stringify(user2.userName))
+       localStorage.setItem("user2QuizName", JSON.stringify(user2.quizName))
+       localStorage.setItem("user2evilQuizResult", JSON.stringify(user2.evilQuizResult))    
+
+    } else
+
+    if ((localStorage.user3Name === undefined) && (user3 !== "")){
+       localStorage.setItem("user3Name", JSON.stringify(user3.userName))
+       localStorage.setItem("user3QuizName", JSON.stringify(user3.quizName))
+       localStorage.setItem("user3evilQuizResult", JSON.stringify(user3.evilQuizResult))    
+
+    } else
+
+    if ((localStorage.user4Name === undefined) && (user4 !== "")){
+       localStorage.setItem("user4Name", JSON.stringify(user4.userName))
+       localStorage.setItem("user4QuizName", JSON.stringify(user4.quizName))
+       localStorage.setItem("user4evilQuizResult", JSON.stringify(user4.evilQuizResult))    
+
+    } else
+
+    if ((localStorage.user5Name === undefined) && (user5 !== "")){
+       localStorage.setItem("user5Name", JSON.stringify(user5.userName))
+       localStorage.setItem("user5QuizName", JSON.stringify(user5.quizName))
+       localStorage.setItem("user5evilQuizResult", JSON.stringify(user5.evilQuizResult))    
+
+    } else
+
+    if ((localStorage.user6Name === undefined) && (user6 !== "")){
+       localStorage.setItem("user6Name", JSON.stringify(user6.userName))
+       localStorage.setItem("user6QuizName", JSON.stringify(user6.quizName))
+       localStorage.setItem("user6evilQuizResult", JSON.stringify(user6.evilQuizResult))    
+
+    } else
+
+    if ((localStorage.user7Name === undefined) && (user7 !== "")){
+       localStorage.setItem("user7Name", JSON.stringify(user7.userName))
+       localStorage.setItem("user7QuizName", JSON.stringify(user7.quizName))
+       localStorage.setItem("user7evilQuizResult", JSON.stringify(user7.evilQuizResult))    
+
+    } else
+
+    if ((localStorage.user8Name === undefined) && (user8 !== "")){
+       localStorage.setItem("user8Name", JSON.stringify(user8.userName))
+       localStorage.setItem("user8QuizName", JSON.stringify(user8.quizName))
+       localStorage.setItem("user8evilQuizResult", JSON.stringify(user8.evilQuizResult))    
+
+    } else
+
+    if ((localStorage.user9Name === undefined) && (user9 !== "")){
+       localStorage.setItem("user9Name", JSON.stringify(user9.userName))
+       localStorage.setItem("user9QuizName", JSON.stringify(user9.quizName))
+       localStorage.setItem("user9evilQuizResult", JSON.stringify(user9.evilQuizResult))    
+
+    } else
+
+    if ((localStorage.user10Name === undefined) && (user10 !== "")){
+       localStorage.setItem("user10Name", JSON.stringify(user10.userName))
+       localStorage.setItem("user10QuizName", JSON.stringify(user10.quizName))
+       localStorage.setItem("user10evilQuizResult", JSON.stringify(user10.evilQuizResult))    
+
+    }
 
 
    }
 
     //user1.quizEvilResult.push("a")
-    //user1.quizNameResult.push("a")
+    //user1.evilQuizResult.push("a")
 
 });
 
@@ -336,38 +1315,161 @@ eframe10b[0].addEventListener("click", function(){
        evilQuestions10.style.display = "none";
        evilOutro.style.display = "flex";
     
-       user1.quizNameResult.push("b")
+       if (localStorage.user1Name === undefined){
+       user1.evilQuizResult.push("b")
+       console.log(user1)
+       }
+
+       if ((localStorage.user2Name === undefined) && (user2 !== "")){
+       user2.evilQuizResult.push("b")
+       console.log(user2)
+
+    }
+
+    if ((localStorage.user3Name === undefined) && (user3 !== "")){
+        user3.evilQuizResult.push("b")
+        console.log(user3)
+        }
+
+        if ((localStorage.user4Name === undefined) && (user4 !== "")){
+            user4.evilQuizResult.push("b")
+            console.log(user4)
+            }
+
+            if ((localStorage.user5Name === undefined) && (user5 !== "")){
+                user5.evilQuizResult.push("b")
+                console.log(user5)
+                }
+
+                if ((localStorage.user6Name === undefined) && (user6 !== "")){
+                    user6.evilQuizResult.push("b")
+                    console.log(user6)
+                    }
+
+                    if ((localStorage.user7Name === undefined) && (user7 !== "")){
+                        user7.evilQuizResult.push("b")
+                        console.log(user7)
+                        }
+
+                        if ((localStorage.user8Name === undefined) && (user8 !== "")){
+                            user8.evilQuizResult.push("b")
+                            console.log(user8)
+                            }
+
+                            if ((localStorage.user9Name === undefined) && (user9 !== "")){
+                                user9.evilQuizResult.push("b")
+                                console.log(user9)
+                                }
+
+                                if ((localStorage.user10Name === undefined) && (user10 !== "")){
+                                    user10.evilQuizResult.push("b")
+                                    console.log(user10)
+                                    }
 
     //localStorage.setItem("user1-EvilQuiz", JSON.stringify(user1.quizEvilResult))
     //localStorage.setItem("user1-username", JSON.stringify(user1.username))
 
+    if (localStorage.user1Name === undefined){
     localStorage.setItem("user1Name", JSON.stringify(user1.userName))
     localStorage.setItem("user1QuizName", JSON.stringify(user1.quizName))
-    localStorage.setItem("user1QuizNameResult", JSON.stringify(user1.quizNameResult))
-    
+    localStorage.setItem("user1evilQuizResult", JSON.stringify(user1.evilQuizResult))
+    } else
+
+     if ((localStorage.user2Name === undefined) && (user2 !== "")){
+        localStorage.setItem("user2Name", JSON.stringify(user2.userName))
+        localStorage.setItem("user2QuizName", JSON.stringify(user2.quizName))
+        localStorage.setItem("user2evilQuizResult", JSON.stringify(user2.evilQuizResult))    
+
+     } else
+
+     if ((localStorage.user3Name === undefined) && (user3 !== "")){
+        localStorage.setItem("user3Name", JSON.stringify(user3.userName))
+        localStorage.setItem("user3QuizName", JSON.stringify(user3.quizName))
+        localStorage.setItem("user3evilQuizResult", JSON.stringify(user3.evilQuizResult))    
+ 
+     } else
+ 
+     if ((localStorage.user4Name === undefined) && (user4 !== "")){
+        localStorage.setItem("user4Name", JSON.stringify(user4.userName))
+        localStorage.setItem("user4QuizName", JSON.stringify(user4.quizName))
+        localStorage.setItem("user4evilQuizResult", JSON.stringify(user4.evilQuizResult))    
+ 
+     } else
+ 
+     if ((localStorage.user5Name === undefined) && (user5 !== "")){
+        localStorage.setItem("user5Name", JSON.stringify(user5.userName))
+        localStorage.setItem("user5QuizName", JSON.stringify(user5.quizName))
+        localStorage.setItem("user5evilQuizResult", JSON.stringify(user5.evilQuizResult))    
+ 
+     } else
+ 
+     if ((localStorage.user6Name === undefined) && (user6 !== "")){
+        localStorage.setItem("user6Name", JSON.stringify(user6.userName))
+        localStorage.setItem("user6QuizName", JSON.stringify(user6.quizName))
+        localStorage.setItem("user6evilQuizResult", JSON.stringify(user6.evilQuizResult))    
+ 
+     } else
+ 
+     if ((localStorage.user7Name === undefined) && (user7 !== "")){
+        localStorage.setItem("user7Name", JSON.stringify(user7.userName))
+        localStorage.setItem("user7QuizName", JSON.stringify(user7.quizName))
+        localStorage.setItem("user7evilQuizResult", JSON.stringify(user7.evilQuizResult))    
+ 
+     } else
+ 
+     if ((localStorage.user8Name === undefined) && (user8 !== "")){
+        localStorage.setItem("user8Name", JSON.stringify(user8.userName))
+        localStorage.setItem("user8QuizName", JSON.stringify(user8.quizName))
+        localStorage.setItem("user8evilQuizResult", JSON.stringify(user8.evilQuizResult))    
+ 
+     } else
+ 
+     if ((localStorage.user9Name === undefined) && (user9 !== "")){
+        localStorage.setItem("user9Name", JSON.stringify(user9.userName))
+        localStorage.setItem("user9QuizName", JSON.stringify(user9.quizName))
+        localStorage.setItem("user9evilQuizResult", JSON.stringify(user9.evilQuizResult))    
+ 
+     } else
+ 
+     if ((localStorage.user10Name === undefined) && (user10 !== "")){
+        localStorage.setItem("user10Name", JSON.stringify(user10.userName))
+        localStorage.setItem("user10QuizName", JSON.stringify(user10.quizName))
+        localStorage.setItem("user10evilQuizResult", JSON.stringify(user10.evilQuizResult)) 
+
     
    }
 
-    //user1.quizEvilResult.push("b")
-    //user1.quizNameResult.push("b")
-    
+    }
+
    });
 
    console.log(localStorage)
 
-//    if (localStorage.getItem("user1-EvilQuiz") !== null){
-
-//        console.log(localStorage.getItem("user1-EvilQuiz"))
-//     }
-
-    //localStorage.clear();
 
 
-    // boucle qui crée une nouvelle variable user à chaque fois qu'un nouveau nom est entré
-    // if le nom existe déjà > Alert("You've already completed this quiz, please answer another SoulQuiz! :)")
-    // else creer un nouvelle variable à partir du nouveau nom avec les clés de la première variable mais value vides
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+////////// USER SCORES ////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
 
 
+function compare(userA, userB, userAUserB){
+    for (let i = 0; i < userA.quiz1.length; i++){
+      if ((userA.quiz1[i] === userB.quiz1[i]) && userA.quiz1[i] !== ""){
+        userAUserB.quiz1[i] = 1;
+      } else {
+        userAUserB.quiz1[i] = 0;
+      }
+    }
+
+    userAUserB.quiz1Score = userAUserB.quiz1.reduce(function(a, c){  
+        return a + c ;
    
+    });
 
-   
+}
+
+
